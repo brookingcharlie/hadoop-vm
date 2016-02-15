@@ -1,6 +1,7 @@
 # Apache Hadoop VM
 
-Automated scripts to provision a single-node Hadoop cluster.
+Automated scripts to provision a single-node Hadoop cluster based on instructions at
+https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/SingleCluster.html.
 
 Uses Vagrant with a simple Bash provisioner script to create an Ubuntu VM with
 the following installed:
