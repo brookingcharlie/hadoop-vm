@@ -8,7 +8,9 @@ apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest
 
 echo 'set background=dark' >> /home/vagrant/.vimrc
 
-apt-get install -y openjdk-8-jdk
+# Install dependencies according to 'Hadoop: Setting up a Single Node Cluster'
+# See https://hadoop.apache.org/docs/r2.7.2/hadoop-project-dist/hadoop-common/SingleCluster.html
+apt-get install -y openjdk-8-jdk ssh rsync
 
 # Create a cache folder under /vagrant, which mounts the host filesystem.
 # This means we won't have to re-download large binaries (e.g. Hadoop 2.7 is 202 MB)
