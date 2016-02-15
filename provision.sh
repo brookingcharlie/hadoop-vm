@@ -25,4 +25,6 @@ if [[ ! -e '/opt/hadoop-2.7.2' ]]; then
   chown -R vagrant: '/opt/hadoop-2.7.2'
   ln -s 'hadoop-2.7.2' '/opt/hadoop'
   echo 'export PATH="/opt/hadoop/bin:$PATH"' >> /home/vagrant/.bashrc
+
+  sed -i "s,JAVA_HOME=.*,JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'," /opt/hadoop/etc/hadoop/hadoop-env.sh
 fi
