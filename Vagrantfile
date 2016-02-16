@@ -4,8 +4,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider "virtualbox" do |vb|
     vb.name = "hadoop"
-    vb.cpus = 2
-    vb.memory = "2048"
+    vb.cpus = 4
+    vb.memory = "4096"
   end
 
   # vagrant-cachier speeds up provisioning by caching downloaded Linux packages.
