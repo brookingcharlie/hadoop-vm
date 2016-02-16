@@ -32,6 +32,8 @@ if [[ ! -e '/opt/hadoop-2.7.2' ]]; then
   echo 'export PATH="/opt/hadoop/bin:$PATH"' >> /home/vagrant/.bashrc
 
   sed -i "s,JAVA_HOME=.*,JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'," /opt/hadoop/etc/hadoop/hadoop-env.sh
-  sudo -u vagrant cp '/vagrant/etc/hadoop/core-site.xml' '/opt/hadoop/etc/hadoop/core-site.xml'
-  sudo -u vagrant cp '/vagrant/etc/hadoop/hdfs-site.xml' '/opt/hadoop/etc/hadoop/hdfs-site.xml'
+  sudo -u vagrant cp '/vagrant/files/core-site.xml' '/opt/hadoop/etc/hadoop/core-site.xml'
+  sudo -u vagrant cp '/vagrant/files/hdfs-site.xml' '/opt/hadoop/etc/hadoop/hdfs-site.xml'
 fi
+
+sudo -u vagrant cp '/vagrant/files/run-example.sh' '/home/vagrant/run-example.sh'
