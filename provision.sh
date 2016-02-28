@@ -15,7 +15,9 @@ apt-get install -y openjdk-8-jdk ssh rsync
 # Setup passphraseless SSH.
 sudo -u vagrant ssh-keygen -t rsa -P '' -f /home/vagrant/.ssh/id_rsa
 sudo -u vagrant cat /home/vagrant/.ssh/id_rsa.pub >> /home/vagrant/.ssh/authorized_keys
-chmod 0600 /home/vagrant/.ssh/authorized_keys
+sudo -u vagrant chmod 0600 /home/vagrant/.ssh/authorized_keys
+sudo -u vagrant cp /vagrant/files/ssh_config /home/vagrant/.ssh/config
+sudo -u vagrant chmod 0600 /home/vagrant/.ssh/config
 
 # Create a cache folder under /vagrant, which mounts the host filesystem.
 # This means we won't have to re-download large binaries (e.g. Hadoop 2.7 is 202 MB)
