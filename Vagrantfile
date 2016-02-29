@@ -8,12 +8,12 @@ Vagrant.configure(2) do |config|
     vb.memory = "4096"
   end
 
+  config.vm.provision "shell", path: "provision.sh"
+
   # vagrant-cachier speeds up provisioning by caching downloaded Linux packages.
   # To install, run `vagrant plugin install vagrant-cachier`.
   # See http://fgrehm.viewdocs.io/vagrant-cachier/.
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.scope = :box
   end
-
-  config.vm.provision "shell", path: "provision.sh"
 end
