@@ -12,7 +12,9 @@ the following installed:
 
 ## Creating the cluster
 
-    vagrant up
+```
+vagrant up
+```
 
 ## Running the example script
 
@@ -26,14 +28,18 @@ Run the command below from your host machine to:
 * get result files from HDFS;
 * stop YARN and HDFS.
 
-    vagrant ssh -- "bash -i run-example.sh"
+```
+vagrant ssh -- "bash -i run-example.sh"
+```
 
 ## Caching
 
 To speed up builds by caching downloaded Debian packages on your host machine,
 run this first:
 
-    vagrant plugin install vagrant-cachier
+```
+vagrant plugin install vagrant-cachier
+```
 
 Note that the provisioner script will download binary packages (e.g. Hadoop) to
 the `./cache` directory on your host. This is done to avoid repeated downloads
